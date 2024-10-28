@@ -48,19 +48,19 @@ resource "null_resource" "vm_provisioners" {
     destination = "/home/testadmin/index.html"
 
     connection {
-      type        = "ssh"
-      user        = "testadmin"
+      type     = "ssh"
+      user     = "testadmin"
       password = "Password1234!"
-      host        = azurerm_public_ip.example.ip_address
+      host     = azurerm_public_ip.example.ip_address
     }
   }
 
   provisioner "remote-exec" {
     connection {
-      type        = "ssh"
-      user        = "testadmin"
+      type     = "ssh"
+      user     = "testadmin"
       password = "Password1234!"
-      host        = azurerm_public_ip.example.ip_address
+      host     = azurerm_public_ip.example.ip_address
     }
 
     inline = [
